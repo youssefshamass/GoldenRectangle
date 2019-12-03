@@ -105,6 +105,9 @@ namespace GoldenRectangle.Core
 
         public int correctNumber(int target)
         {
+            if (isValidFibonnaciNumber(target))
+                return target;
+
             if (_dataSource == null)
                 throw new Exception("Fatal Error, Null Datasource");
 
