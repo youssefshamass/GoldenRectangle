@@ -36,6 +36,8 @@
             this.generateButton = new MetroSet_UI.Controls.MetroSetButton();
             this.smallBoardsListView = new MetroSet_UI.Controls.MetroSetListBox();
             this.predictPage = new MetroSet_UI.Child.MetroSetTabPage();
+            this.generateSolutionButton = new MetroSet_UI.Controls.MetroSetButton();
+            this.resetButton = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetLabel3 = new MetroSet_UI.Controls.MetroSetLabel();
             this.rectangleSizeTextBox = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
@@ -44,9 +46,6 @@
             this.metroSetDivider1 = new MetroSet_UI.Controls.MetroSetDivider();
             this.outputListBox = new MetroSet_UI.Controls.MetroSetListBox();
             this.inputListBox = new MetroSet_UI.Controls.MetroSetListBox();
-            this.aboutUsPage = new MetroSet_UI.Child.MetroSetTabPage();
-            this.resetButton = new MetroSet_UI.Controls.MetroSetButton();
-            this.generateSolutionButton = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetTabControl1.SuspendLayout();
             this.calculatePage.SuspendLayout();
             this.predictPage.SuspendLayout();
@@ -83,13 +82,12 @@
             this.metroSetTabControl1.AnimateTime = 200;
             this.metroSetTabControl1.Controls.Add(this.calculatePage);
             this.metroSetTabControl1.Controls.Add(this.predictPage);
-            this.metroSetTabControl1.Controls.Add(this.aboutUsPage);
             this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroSetTabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
             this.metroSetTabControl1.Location = new System.Drawing.Point(12, 103);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
-            this.metroSetTabControl1.SelectedIndex = 1;
+            this.metroSetTabControl1.SelectedIndex = 0;
             this.metroSetTabControl1.Size = new System.Drawing.Size(1299, 690);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl1.Speed = 20;
@@ -239,6 +237,58 @@
             this.predictPage.ThemeAuthor = "Narwin";
             this.predictPage.ThemeName = "MetroLite";
             this.predictPage.ToolTipText = null;
+            // 
+            // generateSolutionButton
+            // 
+            this.generateSolutionButton.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.generateSolutionButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.generateSolutionButton.DisabledForeColor = System.Drawing.Color.Gray;
+            this.generateSolutionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.generateSolutionButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.generateSolutionButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.generateSolutionButton.HoverTextColor = System.Drawing.Color.White;
+            this.generateSolutionButton.Location = new System.Drawing.Point(455, 120);
+            this.generateSolutionButton.Name = "generateSolutionButton";
+            this.generateSolutionButton.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.generateSolutionButton.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.generateSolutionButton.NormalTextColor = System.Drawing.Color.White;
+            this.generateSolutionButton.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.generateSolutionButton.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.generateSolutionButton.PressTextColor = System.Drawing.Color.White;
+            this.generateSolutionButton.Size = new System.Drawing.Size(156, 36);
+            this.generateSolutionButton.Style = MetroSet_UI.Design.Style.Light;
+            this.generateSolutionButton.StyleManager = null;
+            this.generateSolutionButton.TabIndex = 10;
+            this.generateSolutionButton.Text = "Generate";
+            this.generateSolutionButton.ThemeAuthor = "Narwin";
+            this.generateSolutionButton.ThemeName = "MetroLite";
+            this.generateSolutionButton.Click += new System.EventHandler(this.generateSolutionButton_Click);
+            // 
+            // resetButton
+            // 
+            this.resetButton.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.resetButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.resetButton.DisabledForeColor = System.Drawing.Color.Gray;
+            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.resetButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.resetButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.resetButton.HoverTextColor = System.Drawing.Color.White;
+            this.resetButton.Location = new System.Drawing.Point(4, 120);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.resetButton.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.resetButton.NormalTextColor = System.Drawing.Color.White;
+            this.resetButton.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.resetButton.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.resetButton.PressTextColor = System.Drawing.Color.White;
+            this.resetButton.Size = new System.Drawing.Size(156, 36);
+            this.resetButton.Style = MetroSet_UI.Design.Style.Light;
+            this.resetButton.StyleManager = null;
+            this.resetButton.TabIndex = 9;
+            this.resetButton.Text = "Reset";
+            this.resetButton.ThemeAuthor = "Narwin";
+            this.resetButton.ThemeName = "MetroLite";
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // metroSetLabel3
             // 
@@ -414,82 +464,14 @@
             this.inputListBox.ThemeAuthor = "Narwin";
             this.inputListBox.ThemeName = "MetroLite";
             // 
-            // aboutUsPage
-            // 
-            this.aboutUsPage.BaseColor = System.Drawing.Color.White;
-            this.aboutUsPage.ImageIndex = 0;
-            this.aboutUsPage.ImageKey = null;
-            this.aboutUsPage.Location = new System.Drawing.Point(4, 42);
-            this.aboutUsPage.Name = "aboutUsPage";
-            this.aboutUsPage.Size = new System.Drawing.Size(1291, 644);
-            this.aboutUsPage.Style = MetroSet_UI.Design.Style.Light;
-            this.aboutUsPage.StyleManager = null;
-            this.aboutUsPage.TabIndex = 2;
-            this.aboutUsPage.Text = "About Us";
-            this.aboutUsPage.ThemeAuthor = "Narwin";
-            this.aboutUsPage.ThemeName = "MetroLite";
-            this.aboutUsPage.ToolTipText = null;
-            // 
-            // resetButton
-            // 
-            this.resetButton.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.resetButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.resetButton.DisabledForeColor = System.Drawing.Color.Gray;
-            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.resetButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.resetButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.resetButton.HoverTextColor = System.Drawing.Color.White;
-            this.resetButton.Location = new System.Drawing.Point(4, 120);
-            this.resetButton.Name = "resetButton";
-            this.resetButton.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.resetButton.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.resetButton.NormalTextColor = System.Drawing.Color.White;
-            this.resetButton.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.resetButton.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.resetButton.PressTextColor = System.Drawing.Color.White;
-            this.resetButton.Size = new System.Drawing.Size(156, 36);
-            this.resetButton.Style = MetroSet_UI.Design.Style.Light;
-            this.resetButton.StyleManager = null;
-            this.resetButton.TabIndex = 9;
-            this.resetButton.Text = "Reset";
-            this.resetButton.ThemeAuthor = "Narwin";
-            this.resetButton.ThemeName = "MetroLite";
-            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
-            // 
-            // generateSolutionButton
-            // 
-            this.generateSolutionButton.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.generateSolutionButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.generateSolutionButton.DisabledForeColor = System.Drawing.Color.Gray;
-            this.generateSolutionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.generateSolutionButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.generateSolutionButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.generateSolutionButton.HoverTextColor = System.Drawing.Color.White;
-            this.generateSolutionButton.Location = new System.Drawing.Point(455, 120);
-            this.generateSolutionButton.Name = "generateSolutionButton";
-            this.generateSolutionButton.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.generateSolutionButton.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.generateSolutionButton.NormalTextColor = System.Drawing.Color.White;
-            this.generateSolutionButton.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.generateSolutionButton.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.generateSolutionButton.PressTextColor = System.Drawing.Color.White;
-            this.generateSolutionButton.Size = new System.Drawing.Size(156, 36);
-            this.generateSolutionButton.Style = MetroSet_UI.Design.Style.Light;
-            this.generateSolutionButton.StyleManager = null;
-            this.generateSolutionButton.TabIndex = 10;
-            this.generateSolutionButton.Text = "Generate";
-            this.generateSolutionButton.ThemeAuthor = "Narwin";
-            this.generateSolutionButton.ThemeName = "MetroLite";
-            this.generateSolutionButton.Click += new System.EventHandler(this.generateSolutionButton_Click);
-            // 
-            // HomeForm1
+            // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1323, 805);
             this.Controls.Add(this.metroSetTabControl1);
             this.Controls.Add(this.metroSetControlBox1);
-            this.Name = "HomeForm1";
+            this.Name = "HomeForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "TCC Fibonacci";
             this.UseSlideAnimation = true;
@@ -518,7 +500,6 @@
         private MetroSet_UI.Controls.MetroSetDivider metroSetDivider1;
         private MetroSet_UI.Controls.MetroSetListBox outputListBox;
         private MetroSet_UI.Controls.MetroSetListBox inputListBox;
-        private MetroSet_UI.Child.MetroSetTabPage aboutUsPage;
         private MetroSet_UI.Controls.MetroSetButton resetButton;
         private MetroSet_UI.Controls.MetroSetButton generateSolutionButton;
     }
