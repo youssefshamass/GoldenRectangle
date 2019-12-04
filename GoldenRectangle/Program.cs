@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using GoldenRectangle.Core;
+using GoldenRectangle.Forms;
 
 namespace GoldenRectangle
 {
@@ -16,7 +17,7 @@ namespace GoldenRectangle
             FibonnaciStore.getInstance();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm());
+            Application.Run(new HomeForm1());
         }
     }
 }

@@ -88,13 +88,15 @@ namespace GoldenRectangle.Core
             return _dataSource.Contains(number);
         }
 
-        public List<int> getRespectiveFibonnaciSeries(int target)
+        public List<int> getRespectiveFibonnaciSeries(int target, int startingFrom = 1, bool includeMax = false)
         {
             List<int> returnValue = new List<int>();
 
             foreach (int entry in _dataSource)
             {
-                if (entry > target)
+                if (entry < startingFrom)
+                    continue;
+                if ((entry >= target && !includeMax) || (entry > target && includeMax))
                     break;
 
                 returnValue.Add(entry);

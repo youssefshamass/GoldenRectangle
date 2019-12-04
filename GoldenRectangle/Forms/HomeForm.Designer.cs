@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.metroSetTabControl1 = new MetroSet_UI.Controls.MetroSetTabControl();
-            this.metroSetTabPage2 = new MetroSet_UI.Child.MetroSetTabPage();
             this.metroSetButton2 = new MetroSet_UI.Controls.MetroSetButton();
             this.styleManager1 = new MetroSet_UI.StyleManager();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
@@ -115,8 +113,8 @@
             this.metroSetLabel18 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.metroSetToolTip1 = new MetroSet_UI.Components.MetroSetToolTip();
+            this.metroSetTabPage2 = new MetroSet_UI.Child.MetroSetTabPage();
             this.metroSetTabControl1.SuspendLayout();
-            this.metroSetTabPage2.SuspendLayout();
             this.metroSetTabPage1.SuspendLayout();
             this.metroSetTabPage3.SuspendLayout();
             this.metroSetContextMenuStrip1.SuspendLayout();
@@ -128,20 +126,22 @@
             // 
             // metroSetTabControl1
             // 
-            this.metroSetTabControl1.Controls.Add(this.metroSetTabPage2);
+            this.metroSetTabControl1.AnimateEasingType = MetroSet_UI.Enums.EasingType.CubeOut;
+            this.metroSetTabControl1.AnimateTime = 200;
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage1);
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage3);
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage4);
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage5);
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage6);
             this.metroSetTabControl1.Controls.Add(this.metroSetTabPage7);
-            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.metroSetTabControl1.Controls.Add(this.metroSetTabPage2);
+            this.metroSetTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroSetTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroSetTabControl1.ItemSize = new System.Drawing.Size(100, 38);
-            this.metroSetTabControl1.Location = new System.Drawing.Point(12, 70);
+            this.metroSetTabControl1.Location = new System.Drawing.Point(2, 60);
             this.metroSetTabControl1.Name = "metroSetTabControl1";
-            this.metroSetTabControl1.SelectedIndex = 0;
-            this.metroSetTabControl1.Size = new System.Drawing.Size(1114, 616);
+            this.metroSetTabControl1.SelectedIndex = 6;
+            this.metroSetTabControl1.Size = new System.Drawing.Size(1134, 636);
             this.metroSetTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroSetTabControl1.Speed = 100;
             this.metroSetTabControl1.Style = MetroSet_UI.Design.Style.Light;
@@ -151,35 +151,6 @@
             this.metroSetTabControl1.ThemeAuthor = "Narwin";
             this.metroSetTabControl1.ThemeName = "MetroLite";
             this.metroSetTabControl1.UseAnimation = true;
-            // 
-            // metroSetTabPage2
-            // 
-            this.metroSetTabPage2.BaseColor = System.Drawing.Color.White;
-            this.metroSetTabPage2.Controls.Add(this.metroSetButton2);
-            this.metroSetTabPage2.Controls.Add(this.metroSetButton1);
-            this.metroSetTabPage2.Controls.Add(this.metroSetEllipse3);
-            this.metroSetTabPage2.Controls.Add(this.metroSetEllipse2);
-            this.metroSetTabPage2.Controls.Add(this.metroSetEllipse1);
-            this.metroSetTabPage2.Controls.Add(this.metroSetBadge2);
-            this.metroSetTabPage2.Controls.Add(this.metroSetBadge1);
-            this.metroSetTabPage2.Controls.Add(this.metroSetLabel2);
-            this.metroSetTabPage2.Controls.Add(this.metroSetLabel3);
-            this.metroSetTabPage2.Controls.Add(this.metroSetLabel19);
-            this.metroSetTabPage2.Controls.Add(this.metroSetLabel1);
-            this.metroSetTabPage2.Controls.Add(this.metroSetDefaultButton2);
-            this.metroSetTabPage2.Controls.Add(this.metroSetDefaultButton1);
-            this.metroSetTabPage2.ImageIndex = 0;
-            this.metroSetTabPage2.ImageKey = null;
-            this.metroSetTabPage2.Location = new System.Drawing.Point(4, 42);
-            this.metroSetTabPage2.Name = "metroSetTabPage2";
-            this.metroSetTabPage2.Size = new System.Drawing.Size(1106, 570);
-            this.metroSetTabPage2.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetTabPage2.StyleManager = this.styleManager1;
-            this.metroSetTabPage2.TabIndex = 1;
-            this.metroSetTabPage2.Text = "ButtonBase";
-            this.metroSetTabPage2.ThemeAuthor = "Narwin";
-            this.metroSetTabPage2.ThemeName = "MetroLite";
-            this.metroSetTabPage2.ToolTipText = null;
             // 
             // metroSetButton2
             // 
@@ -203,7 +174,6 @@
             this.metroSetButton2.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetButton2.StyleManager = this.styleManager1;
             this.metroSetButton2.TabIndex = 9;
-            this.metroSetButton2.Text = "Disabled button";
             this.metroSetButton2.ThemeAuthor = "Narwin";
             this.metroSetButton2.ThemeName = "MetroLite";
             // 
@@ -236,7 +206,6 @@
             this.metroSetButton1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetButton1.StyleManager = this.styleManager1;
             this.metroSetButton1.TabIndex = 9;
-            this.metroSetButton1.Text = "Normal button";
             this.metroSetButton1.ThemeAuthor = "Narwin";
             this.metroSetButton1.ThemeName = "MetroLite";
             // 
@@ -251,7 +220,7 @@
             this.metroSetEllipse3.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.metroSetEllipse3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.metroSetEllipse3.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetEllipse3.Image = ((System.Drawing.Image)(resources.GetObject("metroSetEllipse3.Image")));
+            this.metroSetEllipse3.Image = null;
             this.metroSetEllipse3.ImageSize = new System.Drawing.Size(64, 64);
             this.metroSetEllipse3.Location = new System.Drawing.Point(793, 234);
             this.metroSetEllipse3.Name = "metroSetEllipse3";
@@ -294,7 +263,6 @@
             this.metroSetEllipse2.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetEllipse2.StyleManager = this.styleManager1;
             this.metroSetEllipse2.TabIndex = 5;
-            this.metroSetEllipse2.Text = "Disabled Ellipse";
             this.metroSetEllipse2.ThemeAuthor = "Narwin";
             this.metroSetEllipse2.ThemeName = "MetroLite";
             // 
@@ -323,7 +291,6 @@
             this.metroSetEllipse1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetEllipse1.StyleManager = this.styleManager1;
             this.metroSetEllipse1.TabIndex = 5;
-            this.metroSetEllipse1.Text = "Ellipse Button";
             this.metroSetEllipse1.ThemeAuthor = "Narwin";
             this.metroSetEllipse1.ThemeName = "MetroLite";
             // 
@@ -358,7 +325,6 @@
             this.metroSetBadge2.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetBadge2.StyleManager = this.styleManager1;
             this.metroSetBadge2.TabIndex = 4;
-            this.metroSetBadge2.Text = "Disabled Badge Button";
             this.metroSetBadge2.ThemeAuthor = "Narwin";
             this.metroSetBadge2.ThemeName = "MetroLite";
             // 
@@ -392,7 +358,6 @@
             this.metroSetBadge1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetBadge1.StyleManager = this.styleManager1;
             this.metroSetBadge1.TabIndex = 3;
-            this.metroSetBadge1.Text = "Normal Badge Button";
             this.metroSetBadge1.ThemeAuthor = "Narwin";
             this.metroSetBadge1.ThemeName = "MetroLite";
             // 
@@ -405,7 +370,6 @@
             this.metroSetLabel2.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetLabel2.StyleManager = this.styleManager1;
             this.metroSetLabel2.TabIndex = 2;
-            this.metroSetLabel2.Text = "Badge Button";
             this.metroSetLabel2.ThemeAuthor = "Narwin";
             this.metroSetLabel2.ThemeName = "MetroLite";
             // 
@@ -418,7 +382,6 @@
             this.metroSetLabel3.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetLabel3.StyleManager = this.styleManager1;
             this.metroSetLabel3.TabIndex = 1;
-            this.metroSetLabel3.Text = "Ellipse Button";
             this.metroSetLabel3.ThemeAuthor = "Narwin";
             this.metroSetLabel3.ThemeName = "MetroLite";
             // 
@@ -431,7 +394,6 @@
             this.metroSetLabel19.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetLabel19.StyleManager = this.styleManager1;
             this.metroSetLabel19.TabIndex = 1;
-            this.metroSetLabel19.Text = "Normal Button";
             this.metroSetLabel19.ThemeAuthor = "Narwin";
             this.metroSetLabel19.ThemeName = "MetroLite";
             // 
@@ -444,7 +406,6 @@
             this.metroSetLabel1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetLabel1.StyleManager = this.styleManager1;
             this.metroSetLabel1.TabIndex = 1;
-            this.metroSetLabel1.Text = "Default Button";
             this.metroSetLabel1.ThemeAuthor = "Narwin";
             this.metroSetLabel1.ThemeName = "MetroLite";
             // 
@@ -470,7 +431,6 @@
             this.metroSetDefaultButton2.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetDefaultButton2.StyleManager = this.styleManager1;
             this.metroSetDefaultButton2.TabIndex = 0;
-            this.metroSetDefaultButton2.Text = "Disabled button";
             this.metroSetDefaultButton2.ThemeAuthor = "Narwin";
             this.metroSetDefaultButton2.ThemeName = "MetroLite";
             // 
@@ -495,7 +455,6 @@
             this.metroSetDefaultButton1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetDefaultButton1.StyleManager = this.styleManager1;
             this.metroSetDefaultButton1.TabIndex = 0;
-            this.metroSetDefaultButton1.Text = "Default button";
             this.metroSetDefaultButton1.ThemeAuthor = "Narwin";
             this.metroSetDefaultButton1.ThemeName = "MetroLite";
             this.metroSetDefaultButton1.Click += new System.EventHandler(this.MetroSetDefaultButton1_Click);
@@ -503,6 +462,7 @@
             // metroSetTabPage1
             // 
             this.metroSetTabPage1.BaseColor = System.Drawing.Color.White;
+            this.metroSetTabPage1.Controls.Add(this.metroSetControlBox1);
             this.metroSetTabPage1.Controls.Add(this.metroSetTile8);
             this.metroSetTabPage1.Controls.Add(this.metroSetTile4);
             this.metroSetTabPage1.Controls.Add(this.metroSetTile7);
@@ -516,7 +476,7 @@
             this.metroSetTabPage1.ImageKey = null;
             this.metroSetTabPage1.Location = new System.Drawing.Point(4, 42);
             this.metroSetTabPage1.Name = "metroSetTabPage1";
-            this.metroSetTabPage1.Size = new System.Drawing.Size(1106, 570);
+            this.metroSetTabPage1.Size = new System.Drawing.Size(1126, 590);
             this.metroSetTabPage1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetTabPage1.StyleManager = this.styleManager1;
             this.metroSetTabPage1.TabIndex = 7;
@@ -709,7 +669,6 @@
             // 
             // metroSetTile1
             // 
-            this.metroSetTile1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroSetTile1.BackgroundImage")));
             this.metroSetTile1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.metroSetTile1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.metroSetTile1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -769,7 +728,7 @@
             this.metroSetTabPage3.ImageKey = null;
             this.metroSetTabPage3.Location = new System.Drawing.Point(4, 42);
             this.metroSetTabPage3.Name = "metroSetTabPage3";
-            this.metroSetTabPage3.Size = new System.Drawing.Size(1106, 570);
+            this.metroSetTabPage3.Size = new System.Drawing.Size(1126, 590);
             this.metroSetTabPage3.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetTabPage3.StyleManager = this.styleManager1;
             this.metroSetTabPage3.TabIndex = 2;
@@ -1126,7 +1085,6 @@
             this.metroSetRichTextBox1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetRichTextBox1.StyleManager = this.styleManager1;
             this.metroSetRichTextBox1.TabIndex = 4;
-            this.metroSetRichTextBox1.Text = resources.GetString("metroSetRichTextBox1.Text");
             this.metroSetRichTextBox1.ThemeAuthor = "Narwin";
             this.metroSetRichTextBox1.ThemeName = "MetroLite";
             this.metroSetRichTextBox1.WordWrap = true;
@@ -1153,7 +1111,6 @@
             this.metroSetTextBox3.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetTextBox3.StyleManager = this.styleManager1;
             this.metroSetTextBox3.TabIndex = 3;
-            this.metroSetTextBox3.Text = resources.GetString("metroSetTextBox3.Text");
             this.metroSetTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.metroSetTextBox3.ThemeAuthor = "Narwin";
             this.metroSetTextBox3.ThemeName = "MetroLite";
@@ -1200,6 +1157,7 @@
             this.metroSetTextBox4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             this.metroSetTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.metroSetTextBox4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.metroSetTextBox4.Image = null;
             this.metroSetTextBox4.Lines = null;
             this.metroSetTextBox4.Location = new System.Drawing.Point(15, 139);
             this.metroSetTextBox4.MaxLength = 32767;
@@ -1247,10 +1205,11 @@
             // 
             // metroSetContextMenuStrip1
             // 
+            this.metroSetContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.metroSetContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.textBoxToolStripMenuItem});
             this.metroSetContextMenuStrip1.Name = "metroSetContextMenuStrip1";
-            this.metroSetContextMenuStrip1.Size = new System.Drawing.Size(116, 26);
+            this.metroSetContextMenuStrip1.Size = new System.Drawing.Size(131, 28);
             this.metroSetContextMenuStrip1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetContextMenuStrip1.StyleManager = null;
             this.metroSetContextMenuStrip1.ThemeAuthor = "Narwin";
@@ -1259,7 +1218,7 @@
             // textBoxToolStripMenuItem
             // 
             this.textBoxToolStripMenuItem.Name = "textBoxToolStripMenuItem";
-            this.textBoxToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.textBoxToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.textBoxToolStripMenuItem.Text = "TextBox";
             // 
             // metroSetLabel8
@@ -1351,7 +1310,7 @@
             this.metroSetTabPage4.ImageKey = null;
             this.metroSetTabPage4.Location = new System.Drawing.Point(4, 42);
             this.metroSetTabPage4.Name = "metroSetTabPage4";
-            this.metroSetTabPage4.Size = new System.Drawing.Size(1106, 570);
+            this.metroSetTabPage4.Size = new System.Drawing.Size(1126, 590);
             this.metroSetTabPage4.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetTabPage4.StyleManager = this.styleManager1;
             this.metroSetTabPage4.TabIndex = 3;
@@ -1735,7 +1694,7 @@
             this.metroSetTabPage5.ImageKey = null;
             this.metroSetTabPage5.Location = new System.Drawing.Point(4, 42);
             this.metroSetTabPage5.Name = "metroSetTabPage5";
-            this.metroSetTabPage5.Size = new System.Drawing.Size(1106, 570);
+            this.metroSetTabPage5.Size = new System.Drawing.Size(1126, 590);
             this.metroSetTabPage5.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetTabPage5.StyleManager = this.styleManager1;
             this.metroSetTabPage5.TabIndex = 4;
@@ -1933,7 +1892,7 @@
             this.metroSetTabPage6.ImageKey = null;
             this.metroSetTabPage6.Location = new System.Drawing.Point(4, 42);
             this.metroSetTabPage6.Name = "metroSetTabPage6";
-            this.metroSetTabPage6.Size = new System.Drawing.Size(1106, 570);
+            this.metroSetTabPage6.Size = new System.Drawing.Size(1126, 590);
             this.metroSetTabPage6.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetTabPage6.StyleManager = this.styleManager1;
             this.metroSetTabPage6.TabIndex = 5;
@@ -2017,7 +1976,7 @@
             this.metroSetTabPage7.ImageKey = null;
             this.metroSetTabPage7.Location = new System.Drawing.Point(4, 42);
             this.metroSetTabPage7.Name = "metroSetTabPage7";
-            this.metroSetTabPage7.Size = new System.Drawing.Size(1106, 570);
+            this.metroSetTabPage7.Size = new System.Drawing.Size(1126, 590);
             this.metroSetTabPage7.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetTabPage7.StyleManager = this.styleManager1;
             this.metroSetTabPage7.TabIndex = 6;
@@ -2176,8 +2135,8 @@
             this.metroSetControlBox1.CloseHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
-            this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(1026, 13);
+            this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.Silver;
+            this.metroSetControlBox1.Location = new System.Drawing.Point(298, 437);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -2193,7 +2152,7 @@
             this.metroSetControlBox1.TabIndex = 1;
             this.metroSetControlBox1.Text = "metroSetControlBox1";
             this.metroSetControlBox1.ThemeAuthor = "Narwin";
-            this.metroSetControlBox1.ThemeName = "MetroLite";
+            this.metroSetControlBox1.ThemeName = "MetroDark";
             // 
             // metroSetToolTip1
             // 
@@ -2206,19 +2165,38 @@
             this.metroSetToolTip1.ThemeAuthor = "Narwin";
             this.metroSetToolTip1.ThemeName = "MetroLite";
             // 
-            // Form1
+            // metroSetTabPage2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.metroSetTabPage2.BaseColor = System.Drawing.Color.White;
+            this.metroSetTabPage2.ImageIndex = 0;
+            this.metroSetTabPage2.ImageKey = null;
+            this.metroSetTabPage2.Location = new System.Drawing.Point(4, 42);
+            this.metroSetTabPage2.Name = "metroSetTabPage2";
+            this.metroSetTabPage2.Size = new System.Drawing.Size(1126, 590);
+            this.metroSetTabPage2.Style = MetroSet_UI.Design.Style.Light;
+            this.metroSetTabPage2.StyleManager = null;
+            this.metroSetTabPage2.TabIndex = 8;
+            this.metroSetTabPage2.Text = "metroSetTabPage2";
+            this.metroSetTabPage2.ThemeAuthor = "Narwin";
+            this.metroSetTabPage2.ThemeName = "MetroLite";
+            this.metroSetTabPage2.ToolTipText = null;
+            // 
+            // HomeForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1138, 698);
-            this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetTabControl1);
-            this.Name = "Form1";
+            this.Name = "HomeForm";
+            this.Padding = new System.Windows.Forms.Padding(2, 60, 2, 2);
+            this.ShowHeader = true;
+            this.ShowLeftRect = false;
             this.SmallRectThickness = 2;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StyleManager = this.styleManager1;
             this.Text = "METROSET UI";
+            this.TextColor = System.Drawing.Color.White;
             this.metroSetTabControl1.ResumeLayout(false);
-            this.metroSetTabPage2.ResumeLayout(false);
             this.metroSetTabPage1.ResumeLayout(false);
             this.metroSetTabPage3.ResumeLayout(false);
             this.metroSetContextMenuStrip1.ResumeLayout(false);
@@ -2233,7 +2211,6 @@
         #endregion
 
         private MetroSet_UI.Controls.MetroSetTabControl metroSetTabControl1;
-        private MetroSet_UI.Child.MetroSetTabPage metroSetTabPage2;
         private MetroSet_UI.Child.MetroSetTabPage metroSetTabPage3;
         private MetroSet_UI.Child.MetroSetTabPage metroSetTabPage4;
         private MetroSet_UI.Child.MetroSetTabPage metroSetTabPage5;
@@ -2318,5 +2295,6 @@
         private MetroSet_UI.Components.MetroSetToolTip metroSetToolTip1;
         private MetroSet_UI.Controls.MetroSetContextMenuStrip metroSetContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem textBoxToolStripMenuItem;
+        private MetroSet_UI.Child.MetroSetTabPage metroSetTabPage2;
     }
 }
