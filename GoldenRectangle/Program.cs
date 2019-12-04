@@ -17,7 +17,7 @@ namespace GoldenRectangle
             FibonnaciStore.getInstance();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm1());
+            Application.Run(new HomeForm());
         }
     }
 }
